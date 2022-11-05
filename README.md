@@ -10,6 +10,22 @@ You must enter this code.
 [x] Windows
 [x] Mac
 
-I used GetX for themes. <img src="https://raw.githubusercontent.com/Eronildo/getbloc/main/docs/assets/getbloc_logo.png" width=150 height=50 />
+
+**This is not professional app!
+**I made this project to improve me**
+**Beginner Level Project.**
+
+[x] Responsive UI
+[+] Functionality
 
 
+**The search feature is available and all referrals found on the original google page are working.
+**I used GetX for themes.**
+
+
+<h5>Dark Theme</h5>
+<img src="https://github.com/ahmettahatokmak/google/blob/main/images/dark_theme.png?raw=true" />
+
+
+<h5>White Theme</h5>
+<img src="https://github.com/ahmettahatokmak/google/blob/main/images/white_theme.png?raw=true" />
