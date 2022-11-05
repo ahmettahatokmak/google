@@ -4,11 +4,11 @@
 You must enter this code.
 <img src="https://github.com/ahmettahatokmak/google/blob/main/images/run.png?raw=true"  />
 
-[+] Web
-[x] Android
-[x] IOS
-[x] Windows
-[x] Mac
+[+] Web <br>
+[x] Android <br>
+[x] IOS <br>
+[x] Windows <br>
+[x] Mac <br>
 
 
 **This is not professional app!** 
@@ -22,7 +22,7 @@ You must enter this code.
 [+] Functionality
 
 
-**The search feature is available and all referrals found on the original google page are working.** <br />x
+**The search feature is available and all referrals found on the original google page are working.** <br />
 **I used GetX for themes.**
 
 
