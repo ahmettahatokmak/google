@@ -2,4 +2,4 @@
 
 <h3>How to run?</h3>
 You must enter this code.
-![run code](https://github.com/ahmettahatokmak/google/blob/main/images/run.png?raw=true)
+<img src="https://github.com/ahmettahatokmak/google/blob/main/images/run.png?raw=true"  />
