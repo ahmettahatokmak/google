@@ -10,6 +10,6 @@ You must enter this code.
 [x] Windows
 [x] Mac
 
-I used GetX for themes. <img src="https://raw.githubusercontent.com/Eronildo/getbloc/main/docs/assets/getbloc_logo.png" / >
+I used GetX for themes. <img src="https://raw.githubusercontent.com/Eronildo/getbloc/main/docs/assets/getbloc_logo.png" />
 
 
