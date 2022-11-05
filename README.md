@@ -11,15 +11,18 @@ You must enter this code.
 [x] Mac
 
 
-**This is not professional app!** \n
-**I made this project to improve me** \n
+**This is not professional app!** 
+<br>
+**I made this project to improve me** 
+<br>
 **Beginner Level Project.**
 
 [x] Responsive UI
+<br />
 [+] Functionality
 
 
-**The search feature is available and all referrals found on the original google page are working.**
+**The search feature is available and all referrals found on the original google page are working.** <br />x
 **I used GetX for themes.**
 
 
