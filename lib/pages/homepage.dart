@@ -1,4 +1,3 @@
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -8,7 +7,6 @@ import 'package:google/colors.dart';
 import 'package:google/path.dart';
 import 'package:google/service/service.dart';
 import 'package:google/theme.dart';
-import 'dart:html' as html;
 
 
 class Homepage extends StatefulWidget {
@@ -26,7 +24,7 @@ class _HomepageState extends State<Homepage> {
     Color? textColor = Get.textTheme.bodyMedium?.color;
     var height = MediaQuery.of(context).size.height;
     return RawKeyboardListener(
-            focusNode: FocusNode(),
+          focusNode: FocusNode(),
         autofocus: true,
         onKey: (key){
           if(key.isKeyPressed(LogicalKeyboardKey.enter)){
@@ -100,19 +98,14 @@ return  SizedBox(
   child:   TextField( 
   controller: searchController,
   cursorWidth: 0.5,
-  cursorColor: Get.theme == MyTheme.whiteTheme ? Colors.black : Colors.white,
+  cursorColor: Get.theme == MyTheme.darkTheme ? Colors.black : Colors.white,
   cursorHeight: 20,
   style: TextStyle(color:Get.textTheme.bodyMedium?.color,fontWeight: FontWeight.w400),
 
   decoration: InputDecoration(
   enabledBorder: OutlineInputBorder(borderSide:const  BorderSide(color: borderColor),borderRadius:  BorderRadius.circular(30)),
   focusedBorder: OutlineInputBorder(borderSide:const  BorderSide(color: borderColor),borderRadius:  BorderRadius.circular(30)),
-  prefixIcon: IconButton(onPressed: (){
-    debugPrint(searchController.text);
-    if(searchController.text.isEmpty) null;
-    else {service.search(query: searchController.text);}
-    
-    },icon: const Icon(Icons.search,color: Color(0XFF9aa0a6),size: 20,)),
+  prefixIcon: const  Icon(Icons.search,color: Color(0XFF9aa0a6),size: 20,),
   suffixIcon: icons()
   ),
 
@@ -145,9 +138,9 @@ return    Row(
           mainAxisAlignment: MainAxisAlignment.center,
   children: [
           
-          button(onTap: (){}, text: "Google'da Ara",w: 122),
+          button(onTap: search, text: "Google'da Ara",w: 122),
           const SizedBox(width: 15,),
-          button(onTap: (){}, text: "Kendimi Şanslı Hissediyorum",w: 236)
+          button(onTap: ()=>service.openNewTap(query: "https://www.google.com/doodles/"), text: "Kendimi Şanslı Hissediyorum",w: 236)
           ],);
 }
 
@@ -160,9 +153,11 @@ return    Row(
 
 Widget bottom(){
   var width = MediaQuery.of(context).size.width;
+  var height= MediaQuery.of(context).size.height;
   const Color textColor = Color(0XFF9aa0a6);
   const TextStyle textStyle = TextStyle(color: textColor,fontWeight: FontWeight.w400);
   return  Container(
+
   alignment: Alignment.bottomCenter,
   color: kUltraDark,
   width: width,
@@ -191,10 +186,10 @@ Widget bottom(){
                 TextButton(onPressed: ()=>service.openNewTap(query: "https://www.google.com/intl/tr_tr/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1"), child: const Text("Reklam",style: textStyle)),
                 TextButton(onPressed: ()=>service.openNewTap(query: "https://google.com/search/howsearchworks/?fg=1"), child: const Text("İşletme",style: textStyle)),
                 TextButton(onPressed: ()=>service.openNewTap(query: "https://google.com/search/howsearchworks/?fg=1"), child: const Text("Arama nasıl çalışır?",style: textStyle)),
-
+  
                 ],),),),
-
-
+  
+  
                    SizedBox(
                     width: 340,
                      child: Align(
@@ -219,15 +214,17 @@ Widget bottom(){
         ],
       ),
     ),
-
-
+  
+  
     ],
     ),);}
 
 
 void search(){
 
-  
+      debugPrint(searchController.text);
+    if(searchController.text.isEmpty){ null;}
+    else {service.search(query: searchController.text);}
     
 }
 
